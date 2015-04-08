@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>3分钟了解建行业绩--亮点都在这里了</title>
+  <meta name="description" content="请点击阅读原文，精彩继续！" >
+  <meta charset="utf-8">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <script src="js/jquery-1.10.1.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/swiper.min.js"></script>
+  <script type="text/javascript">
+    var phoneWidth =  parseInt(window.screen.width);
+    var phoneScale = phoneWidth/640;
+    var ua = navigator.userAgent;
+    if (/Android (\d+\.\d+)/.test(ua)){
+      var version = parseFloat(RegExp.$1);
+      // andriod 2.3
+      if(version>2.3){
+        document.write('<meta name="viewport" content="width=640, minimum-scale = '+phoneScale+', maximum-scale = '+phoneScale+', target-densitydpi=device-dpi">');
+      // andriod 2.3以上
+      }else{
+        document.write('<meta name="viewport" content="width=640, target-densitydpi=device-dpi">');
+      }
+      // 其他系统
+    } else {
+      document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+    }
+    
+    $(function(){
+      
+      var oldSwiperIndex = 0;
+      var currSwiperIndex = 0;
+      $('#page13').css('height',$(window).height());
+      
+      var mySwiper = new Swiper('.swiper-container', {
+        direction: 'vertical',
+        parallax: true,
+        initialSlide:0,
+        //loop:true,
+        onInit:function(){
+          setTimeout(showPage,1000);
+        },
+        onSlideChangeStart:function(swiper){
+          //alert(swiper.activeIndex);
+          oldSwiperIndex = swiper.activeIndex;
+        },
+        onSlideChangeEnd:function(swiper){
+          //alert(swiper.activeIndex);
+          currSwiperIndex = swiper.activeIndex;
+          showPage();
+        },
+        onTouchStart:function(swiper,event){
+          //currSwiperIndex = swiper.activeIndex;
+        },
+        onTransitionEnd:function(swiper){
+          //currSwiperIndex = swiper.activeIndex;
+        },
+        onTouchEnd:function(swiper,event){
+          //currSwiperIndex = swiper.activeIndex;
+          currSwiperIndex = swiper.activeIndex;
+          showPage();
+        }
+      });
+      
+      function showPage(){
+        //alert(currSwiperIndex);
+        switch(currSwiperIndex){
+          case 0:
+            $('#page1 .title').animate({opacity:1,marginTop:270},1800,'easeInQuad',function(){
+              $('#page1 .info').animate({bottom:70},1500);  
+            });
+            break;
+          case 1:
+            $('#page2 .title .imgdiv').fadeIn(function(){
+              $(this).animate({marginTop:0},1800);
+            });
+            $('#page2 .bottom').animate({bottom:0,opacity:1},1000);
+            
+            $('#page2 .no1').animate({marginLeft:0},1000);
+            setTimeout(function(){
+              $('#page2 .no2').animate({marginLeft:0},1000);
+            },500);
+            setTimeout(function(){
+              $('#page2 .no3').animate({marginLeft:0},1000);
+            },700);
+            setTimeout(function(){
+              $('#page2 .no4').animate({marginLeft:0},1000);
+            },900);
+            setTimeout(function(){
+              $('#page2 .no5').animate({marginLeft:0},1000);
+            },1100);
+            
+            break;
+          case 2:
+            $('#page3 .title .imgdiv').fadeIn(function(){
+              $(this).animate({marginTop:0},1800);
+            });
+            $('#page3 .content').fadeIn(function(){
+              $('img',this).animate({marginTop:0},1500,function(){
+                $('#page3 .money img').fadeIn(function(){
+                  $(this).animate({width:487},1500);  
+                }); 
+              }); 
+            });
+            break;
+          case 3:
+            $('#page4 .title .imgdiv').fadeIn(function(){
+              $(this).animate({marginTop:0},1800);
+            });
+            $('#page4 .content').fadeIn(function(){
+              $('img',this).animate({marginTop:0},600,function(){
+                $('#page4 .money img').fadeIn(function(){
+                  $(this).animate({width:487},1500);  
+                }); 
+              }); 
+            });
+            break;
+          case 4:
+            $('#page5 .title .imgdiv').fadeIn(function(){
+              $(this).animate({marginTop:0},1800);
+            });
+            $('#page5 .content img').animate({width:402},1500,function(){
+                $('#page5 .money').fadeIn(function(){
+                  $('img',this).animate({width:529},1500);  
+                }); 
+            });
+            break;
+          case 5:
+            $('#page6 .title .imgdiv').fadeIn(function(){
+              $(this).animate({marginTop:0},1800);
+            });
+            $('#page6 .content img').animate({width:563},1500,function(){
+                $('#page6 .money').fadeIn(function(){
+                  $('img',this).animate({width:519},1500);  
+                }); 
+            });
+            break;
+          case 6:
+            $('#page7 .title .imgdiv').fadeIn(function(){
+              $(this).animate({marginTop:0},1800);
+            });
+            $('#page7 .content img').animate({marginTop:0},1500);
+            break;
+          case 7:
+            $('#page8 .title .imgdiv').fadeIn(function(){
+              $(this).animate({marginTop:0},1800);
+            });
+            $('#page8 .no1 img').animate({marginTop:0},800,function(){
+                $('#page8 .no2').animate({marginTop:0},800,function(){
+                  $('#page8 .no3').animate({marginTop:0},800);  
+                }); 
+            });
+            break;
+          case 8:
+            $('#page9 .title .imgdiv').fadeIn(function(){
+              $(this).animate({marginTop:0},1200,function(){
+                setTimeout(function(){
+                  $('#page9 .no1').fadeIn(600);
+                },400);
+
+                setTimeout(function(){
+                  $('#page9 .no2').fadeIn();
+                },1100);
+                
+                setTimeout(function(){
+                  $('#page9 .no3').fadeIn();
+                  setTimeout(function(){
+                    $('#page9 .content img').animate({marginTop:0},800);  
+                  },200);
+                    
+                },1700);
+              });
+            });
+            break;
+            
+          case 9:
+            $('#page10 .title .imgdiv').fadeIn(function(){
+              $(this).animate({marginTop:0},1800);
+            });
+            $('#page10 .no1 img').animate({marginTop:0},800,function(){
+              $('#page10 .no2').animate({marginTop:0},900,function(){
+                $('#page10 .no3').animate({marginTop:0},1000,function(){
+                  $('#page10 .no4').animate({marginTop:0},1000);
+                }); 
+              }); 
+            });
+            break;
+            
+          case 10:
+            $('#page11 .title .imgdiv').fadeIn(function(){
+              $(this).animate({marginTop:0},1800);
+            });
+            $('#page11 .content').fadeIn(800,function(){
+              $('img',this).animate({marginTop:0},900,function(){
+                $('#page11 .bottom').fadeIn(800); 
+              });
+            });
+            break;
+            
+          case 11:
+            $('#page12 .title .imgdiv').fadeIn(function(){
+              $(this).animate({marginTop:0},1800);
+            });
+            $('#page12 .content').fadeIn(800,function(){
+              $('img',this).animate({marginTop:0},900,function(){
+                $('#page12 .bottom').fadeIn(500,function(){
+                  $('img',this).animate({width:476},800);
+                });
+              });
+            });
+            break;
+            
+          case 12:
+            $('#page13 img').animate({width:346},1500);
+            break;
+            
+        }
+      }
+      
+      function resetPage(){
+        switch(oldSwiperIndex){
+          case 0:
+            break;
+          case 2:
+            break;
+          case 3:
+            break;
+            
+        }
+      }
+      
+      var musicing = true;
+      $('#btnMusic').click(function(){
+        if(musicing){
+          $('audio')[0].pause();
+          musicing = false;
+        }else{
+          $('audio')[0].play();
+          musicing = true;
+        }
+      });
+      
+    });
+  </script>
+  <style>
+  html, body {
+        position: relative;
+        height: 100%;
+    }
+    body {
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color:#000;
+        margin: 0;
+        padding: 0;
+    }
+  div{
+        margin: 0;
+        padding: 0;
+    text-align:center;
+  }
+  img{border:none;}
+  .hid{
+        display:none;
+  }
+  .swiper-container,.swiper-slide {
+        width: 640px;
+        height: 100%;
+    overflow:hidden;
+  }
+  #page1{
+    background:url(images/index_bg.jpg) no-repeat;
+  }
+  .pt55{
+    padding-top:55px;
+  }
+  </style>
+</head>
+<body>
+
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide" id="page1">
+        <div class="title" style="margin-top:120px;height:204px;opacity:0;"><img src="images/01/01.png" /></div>
+        <div class="info" style="bottom:-300px; position:absolute;margin-left:-150px;left:50%;"><img src="images/01/02.png" /></div>
+      </div>
+      
+      <div class="swiper-slide" id="page2">
+        <div class="title" style="height:99px;padding-top:70px;overflow:hidden;">
+          <div class="imgdiv hid" style="display:none;margin-top:-200px;">
+            <img src="images/02/001.png" />
+          </div>
+        </div>
+        <div class="no1" style="margin-left:700px;margin-top:55px;"><img src="images/02/01.png" /></div>
+        <div class="no2" style="margin-left:700px;margin-top:10px;"><img src="images/02/02.png" /></div>
+        <div class="no3" style="margin-left:700px;margin-top:10px;"><img src="images/02/03.png" /></div>
+        <div class="no4" style="margin-left:700px;margin-top:10px;"><img src="images/02/04.png" /></div>
+        <div class="no5" style="margin-left:700px;margin-top:10px;"><img src="images/02/05.png" /></div>
+        <div class="bottom" style="position:absolute;right:0px;bottom:-200px;opacity:0.2;">
+          <img src="images/02/07.png" />
+        </div>
+      </div>
+      
+      <div class="swiper-slide" id="page3">
+        <div class="title pt55" style="height:135px;overflow:hidden;">
+          <div class="imgdiv hid" style="margin-top:-200px;">
+            <img src="images/03/01.png" />
+          </div>
+        </div>
+        <div class="content hid" style="margin-top:80px;height:419px"><img style="margin-top:100px;" src="images/03/02.png" /></div>
+        <div class="money" style="height:141px;margin-top:60px;"><img src="images/03/03.png" width="0" /></div>
+      </div>
+      
+      <div class="swiper-slide" id="page4">
+        <div class="title pt55" style="height:134px;overflow:hidden;">
+          <div class="imgdiv hid" style="margin-top:-200px;">
+            <img src="images/04/01.png" />
+          </div>
+        </div>
+        <div class="content hid" style="height:485px;margin-top:60px;"><img style="margin-top:100px;" src="images/04/02.png" /></div>
+        <div class="money" style="height:120px;margin-top:30px;"><img src="images/04/03.png" width="0" /></div>
+      </div>
+      
+      <div class="swiper-slide" id="page5">
+        <div class="title pt55" style="height:137px;overflow:hidden;">
+          <div class="imgdiv hid" style="margin-top:-200px;">
+            <img src="images/05/01.png" />
+          </div>
+        </div>
+        <div class="content" style="height:402px;margin-top:25px;"><img src="images/05/02.png" width="50" /></div>
+        <div class="money hid" style="height:167px;margin-top:70px;"><img src="images/05/03.png" width="50" /></div>
+      </div>
+      
+      <div class="swiper-slide" id="page6">
+        <div class="title pt55" style="height:131px;overflow:hidden;">
+          <div class="imgdiv hid" style="margin-top:-200px;">
+            <img src="images/06/01.png" />
+          </div>
+        </div>
+        <div class="content" style="height:273px;margin-top:100px;"><img src="images/06/02.png" width="50" /></div>
+        <div class="money hid" style="height:271px;margin-top:30px;"><img src="images/06/03.png" width="50" /></div>
+      </div>
+      
+      <div class="swiper-slide" id="page7">
+        <div class="title pt55" style="height:133px;overflow:hidden;">
+          <div class="imgdiv hid" style="margin-top:-200px;">
+            <img src="images/07/01.png" />
+          </div>
+        </div>
+        <div class="content" style="height:478px;margin-top:130px;"><img style="margin-top:1200px;" src="images/07/02.png" /></div>
+      </div>
+      
+      <div class="swiper-slide" id="page8">
+        <div class="title pt55" style="height:130px;overflow:hidden;">
+          <div class="imgdiv hid" style="margin-top:-200px;">
+            <img src="images/08/01.png" />
+          </div>
+        </div>
+        <div class="no1" style="margin-top:75px;"><img style="margin-top:1200px;" src="images/08/02.png" /></div>
+        <div class="no2" style="margin-top:1200px;"><img src="images/08/03.png" /></div>
+        <div class="no3" style="margin-top:1200px;"><img src="images/08/04.png" /></div>
+      </div>
+      
+      <div class="swiper-slide" id="page9">
+        <div class="title pt55" style="height:130px;overflow:hidden;">
+          <div class="imgdiv hid" style="margin-top:-200px;">
+            <img src="images/09/04.png" />
+          </div>
+        </div>
+        <div style="position:relative;width:443px;height:253px;margin-top:115px;margin-left:-222px;left:50%;">
+          <div class="no1 hid" style="position:absolute;left:0px;"><img src="images/09/01.png" /></div>
+          <div class="no2 hid" style="position:absolute;left:100px;top:50px;"><img src="images/09/02.png" /></div>
+          <div class="no3 hid" style="position:absolute;left:200px;top:100px;"><img src="images/09/03.png" /></div>
+        </div>
+        <div class="content" style="height:132px;margin-top:75px;"><img style="margin-top:900px;" src="images/09/05.png" /></div>
+      </div>
+      
+      <div class="swiper-slide" id="page10">
+        <div class="title pt55" style="height:130px;overflow:hidden;">
+          <div class="imgdiv hid" style="margin-top:-200px;">
+            <img src="images/10/01.png" />
+          </div>
+        </div>
+        <div class="no1" style="margin-top:80px;"><img style="margin-top:1200px;" src="images/10/03.png" /></div>
+        <div class="no2" style="margin-top:1200px;"><img src="images/10/04.png" /></div>
+        <div class="no3" style="margin-top:1200px;"><img src="images/10/05.png" /></div>
+        <div class="no4" style="margin-top:1200px;"><img src="images/10/06.png" /></div>
+      </div>
+      
+      <div class="swiper-slide" id="page11">
+        <div class="title pt55" style="height:130px;overflow:hidden;">
+          <div class="imgdiv hid" style="margin-top:-200px;">
+            <img src="images/11/01.png" />
+          </div>
+        </div>
+        <div class="content hid" style="height:304px;margin-top:125px;"><img style="margin-top:100px;" src="images/11/02.png"/></div>
+        <div class="bottom hid" style="height:190px;margin-top:75px;"><img src="images/11/03.png" /></div>
+      </div>
+      
+      <div class="swiper-slide" id="page12">
+        <div class="title pt55" style="height:132px;overflow:hidden;">
+          <div class="imgdiv hid" style="margin-top:-200px;">
+            <img src="images/12/01.png" />
+          </div>
+        </div>
+        <div class="content hid" style="height:383px; margin-top:100px;"><img style="margin-top:100px;" src="images/12/02.png" /></div>
+        <div class="bottom hid" style="height:143px;margin-top:30px;"><img src="images/12/03.png" width="50" /></div>
+      </div>
+      
+      <div class="swiper-slide" id="page13" style="vertical-align:middle;position:relative;">
+        <img style="margin-top:290px;" src="images/13/01.png" width="50" />
+      </div>
+    </div>
+  </div>
+
+  <div id="btnMusic" style="background-image:url(images/music.png);position:fixed;right:30px;bottom:25px;width:55px;height:55px;z-index:9999;-webkit-animation: rotating 1.2s linear infinite;animation:rotating 1.2s linear infinite;-moz-animation: rotating 1.2s linear infinite;-o-animation: rotating 1.2s linear infinite;">
+  </div>
+  <audio id="music" src="images/music.mp3" loop="loop" autoplay></audio>
+
+  <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+  <script>
+    wx.config({
+      appId: 'wx8240bd952f97dc67',
+      timestamp: 1428505867,
+      nonceStr: 'aUS4DNFX6NL1Q1Fb',
+      signature: 'cd1f22d41dc718b3b92ddc84d01bde8e30659b9e',
+      jsApiList: [
+        'onMenuShareTimeline','onMenuShareAppMessage'
+      ]
+    });
+
+    var shareImgUrl = 'http://ccb2014.tensynchina.com/images/share.jpg';
+    var shareUrl = 'http://ccb2014.tensynchina.com/';
+
+    wx.ready(function () {
+      wx.onMenuShareTimeline({
+        title: '3分钟了解建行业绩--亮点都在这里了',
+        link: shareUrl,
+        imgUrl: shareImgUrl
+      });
+      wx.onMenuShareAppMessage({
+        title: '3分钟了解建行业绩--亮点都在这里了',
+        desc:'请点击阅读原文，精彩继续！',
+        link: shareUrl,
+        imgUrl: shareImgUrl
+      });
+    });
+  </script>
+</body>
+</html>
